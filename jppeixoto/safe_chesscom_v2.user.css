@@ -17,9 +17,9 @@
 @var    text     winnerPic    "Imagem do vencedor"   "'https://github.com/FSA1/Styles/raw/main/jppeixoto/winner.jpg'"
 ==/UserStyle== */
 @-moz-document domain("chess.com") {
-    .game-over-player-picture:not([alt="jppeixoto29"]),
-    .player-image.avatar-component:not([alt="jppeixoto29"]),
-    .board-player-default-userAvatar:not([alt="jppeixoto29"]) {
+    .game-over-player-picture:not([alt=div#notifications-request("username")]),
+    .player-image.avatar-component:not([alt=div#notifications-request("username")]),
+    .board-player-default-userAvatar:not([alt=div#notifications-request("username")]) {
         if hidePic=="op1" {
             filter: blur(blurAmount)!important;
             -webkit-filter: blur(blurAmount)!important;
@@ -33,7 +33,7 @@
         }
     }
     /*imagem para o vencedor da partida*/
-   #board-layout-chessboard > div.board-modal-component > div > div.game-over-player-component.game-over-modal-player > div.game-over-player-player.game-over-player-win > div > img:not([alt="jppeixoto29"]){
+   #board-layout-chessboard > div.board-modal-component > div > div.game-over-player-component.game-over-modal-player > div.game-over-player-player.game-over-player-win > div > img:not([alt=div#notifications-request("username")]){
         if hidePic=="op1" || hidePic=="op2" || hidePic=="op3" {
             content: url(winnerPic)!important;            
             filter: blur(0)!important;
@@ -42,7 +42,7 @@
         }
     }
     /*imagem para o vencedor da partida*/
-    #board-layout-chessboard > div:nth-child(4) > div.board-dialog-component > div > div.game-over-player-component > div.game-over-player-player.undefined.game-over-player-win > div > img:not([alt="jppeixoto29"]) {
+    #board-layout-chessboard > div:nth-child(4) > div.board-dialog-component > div > div.game-over-player-component > div.game-over-player-player.undefined.game-over-player-win > div > img:not([alt=div#notifications-request("username")]) {
         if hidePic=="op1" || hidePic=="op2" || hidePic=="op3" {
             content: url(winnerPic)!important;            
             filter: blur(0)!important;
